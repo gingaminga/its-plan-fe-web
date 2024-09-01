@@ -1,3 +1,6 @@
+import "@radix-ui/themes/styles.css";
+
+import { Theme } from "@radix-ui/themes";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import type { ReactNode } from "react";
@@ -16,7 +19,9 @@ interface IRootLayout {
 export default function RootLayout({ children }: Readonly<IRootLayout>) {
   return (
     <html lang="ko">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Theme>{children}</Theme>
+      </body>
     </html>
   );
 }
