@@ -8,8 +8,8 @@ import type { ReactNode } from "react";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "POL",
-  description: "Plan of life",
+  title: "ITS PLAN",
+  description: "Plan of life! It's plan :)",
 };
 
 interface IRootLayout {
