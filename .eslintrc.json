@@ -20,12 +20,26 @@
   },
   "plugins": ["react", "@typescript-eslint", "react-hooks"],
   "rules": {
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
     "react/jsx-filename-extension": [
       1,
       {
         "extensions": [".js", ".jsx", ".ts", ".tsx"]
       }
     ],
-    "react/react-in-jsx-scope": "off"
+    "react/react-in-jsx-scope": "off",
+    "react/require-default-props": "off"
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
+    }
   }
 }
