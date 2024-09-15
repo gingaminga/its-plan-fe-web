@@ -1,7 +1,7 @@
+import "@/assets/styles/globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import type { ReactNode } from "react";
-import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,7 +17,9 @@ interface IRootLayout {
 export default function RootLayout({ children }: Readonly<IRootLayout>) {
   return (
     <html lang="ko">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <div className="h-screen min-h-screen w-screen">{children}</div>
+      </body>
     </html>
   );
 }
