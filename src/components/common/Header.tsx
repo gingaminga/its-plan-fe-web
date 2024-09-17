@@ -1,4 +1,5 @@
 import GlobalNavigationBar from "@/components/common/GlobalNavigationBar";
+import ThemeChanger from "@/components/common/ThemeChanger";
 import { Bell, CircleUserRound, Leaf, Menu } from "lucide-react";
 
 export default function Header() {
@@ -22,6 +23,7 @@ export default function Header() {
         <GlobalNavigationBar />
       </div>
       <div className="navbar-end gap-2">
+        <ThemeChanger />
         <button aria-label="Alarm button" className="btn btn-circle btn-ghost max-sm:btn-sm" type="button">
           <div className="indicator">
             <span className="badge indicator-item badge-primary badge-xs" />
