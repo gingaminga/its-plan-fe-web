@@ -1,4 +1,5 @@
 import "@/assets/styles/globals.css";
+import Header from "@/components/common/Header";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import type { ReactNode } from "react";
@@ -18,7 +19,10 @@ export default function RootLayout({ children }: Readonly<IRootLayout>) {
   return (
     <html lang="ko">
       <body className={inter.className}>
-        <div className="h-screen min-h-screen w-screen">{children}</div>
+        <div className="h-screen min-h-screen w-screen">
+          <Header />
+          {children}
+        </div>
       </body>
     </html>
   );
