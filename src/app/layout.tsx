@@ -38,7 +38,7 @@ export default function RootLayout({ children }: Readonly<IRootLayout>) {
       <body className={inter.className}>
         <div className="h-screen min-h-screen w-screen">
           <Header />
-          {children}
+          <div className="hero h-full">{children}</div>
         </div>
       </body>
     </html>

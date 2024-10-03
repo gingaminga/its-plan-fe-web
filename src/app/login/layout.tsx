@@ -5,9 +5,5 @@ interface ILoginLayout {
 }
 
 export default function LoginLayout({ children }: Readonly<ILoginLayout>) {
-  return (
-    <div className="hero h-full">
-      <div className="hero-content">{children}</div>
-    </div>
-  );
+  return <div className="hero-content">{children}</div>;
 }
