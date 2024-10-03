@@ -12,11 +12,11 @@ export const metadata: Metadata = {
   description: "Plan of life! It's plan :)",
 };
 
-interface IRootLayout {
+interface RootLayout {
   children: ReactNode;
 }
 
-export default function RootLayout({ children }: Readonly<IRootLayout>) {
+export default function Layout({ children }: Readonly<RootLayout>) {
   const cookieStore = cookies();
   const themeCookie = cookieStore.get("theme");
   const theme = themeCookie?.value;
@@ -38,7 +38,7 @@ export default function RootLayout({ children }: Readonly<IRootLayout>) {
       <body className={inter.className}>
         <div className="h-screen min-h-screen w-screen">
           <Header />
-          {children}
+          <div className="hero h-full">{children}</div>
         </div>
       </body>
     </html>

@@ -2,7 +2,7 @@ import Title from "@/components/common/Title";
 import LoginForm from "@/components/form/LoginForm";
 import Link from "next/link";
 
-export default function LoginPage() {
+export default function Page() {
   return (
     <div className="w-96 max-sm:w-48">
       <Title title="로그인&회원가입" />
