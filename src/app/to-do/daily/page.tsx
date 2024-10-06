@@ -1,3 +1,5 @@
+import ToDoList from "@/components/to-do/ToDoList";
+import { MOCKED_TO_DO_LIST } from "@/mock-up/to-do";
 import { SearchParamsProperty } from "@/types/common";
 import { isYYYYMMDD, makeYYYYMMDD } from "@/utils/date";
 import dayjs from "dayjs";
@@ -15,5 +17,9 @@ export default function ToDoDailyPage({ searchParams }: ToDoDailyPageProps) {
     realDate = makeYYYYMMDD();
   }
 
-  return <div className="flex w-full items-center justify-center">{realDate}</div>;
+  return (
+    <div className="flex w-full items-center justify-center">
+      <ToDoList toDos={MOCKED_TO_DO_LIST} />
+    </div>
+  );
 }
