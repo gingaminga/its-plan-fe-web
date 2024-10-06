@@ -1,9 +1,9 @@
 import type { ReactNode } from "react";
 
-interface LoginLayout {
+interface LoginLayoutProps {
   children: ReactNode;
 }
 
-export default function Layout({ children }: Readonly<LoginLayout>) {
+export default function LoginLayout({ children }: Readonly<LoginLayoutProps>) {
   return <div className="hero-content">{children}</div>;
 }
