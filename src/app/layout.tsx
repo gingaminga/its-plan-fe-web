@@ -12,11 +12,11 @@ export const metadata: Metadata = {
   description: "Plan of life! It's plan :)",
 };
 
-interface RootLayout {
+interface RootLayoutProps {
   children: ReactNode;
 }
 
-export default function Layout({ children }: Readonly<RootLayout>) {
+export default function RootLayout({ children }: Readonly<RootLayoutProps>) {
   const cookieStore = cookies();
   const themeCookie = cookieStore.get("theme");
   const theme = themeCookie?.value;
