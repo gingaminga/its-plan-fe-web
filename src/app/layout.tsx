@@ -36,9 +36,9 @@ export default function RootLayout({ children }: Readonly<RootLayoutProps>) {
         </head>
       )}
       <body className={inter.className}>
-        <div className="h-screen min-h-screen w-screen">
+        <div className="flex min-h-screen flex-col">
           <Header />
-          <div className="hero h-full">{children}</div>
+          <div className="hero flex-1">{children}</div>
         </div>
       </body>
     </html>
