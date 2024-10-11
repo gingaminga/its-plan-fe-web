@@ -6,7 +6,7 @@ export default function Header() {
   // TODO: 로그인 여부에 따른 예외처리
 
   return (
-    <header className="navbar absolute top-0 w-full shadow-lg">
+    <header className="navbar sticky top-0 z-10 w-full shadow-lg backdrop-blur-xl">
       <div className="navbar-start">
         <div className="dropdown hidden gap-2 max-sm:flex">
           <div tabIndex={0} role="button" className="btn btn-circle btn-ghost max-sm:btn-sm" aria-label="Menu button">
