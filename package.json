@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "prettier": "prettier --write .",
+    "eslint": "eslint --fix .",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
