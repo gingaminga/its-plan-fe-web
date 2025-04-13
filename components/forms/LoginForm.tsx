@@ -8,10 +8,10 @@ export default function LoginForm() {
   return (
     <>
       <Typography.H4
-        className="mb-6 text-center transition-all duration-200 max-xs:mb-3 max-xs:text-sm"
+        className="mb-6 text-center transition-all duration-200 max-sm:mb-3 max-sm:text-sm"
         text="로그인 & 회원가입"
       />
-      <form className="flex flex-col gap-4 max-xs:hidden">
+      <form className="flex flex-col gap-4 max-sm:hidden">
         <Button className="btn-kakao">
           <KakaoLogo />
           Login with Kakao
@@ -25,7 +25,7 @@ export default function LoginForm() {
           Login with Google
         </Button>
       </form>
-      <form className="hidden justify-center gap-4 max-xs:flex">
+      <form className="hidden justify-center gap-4 max-sm:flex">
         <Button className="btn-kakao">
           <KakaoLogo />
         </Button>
