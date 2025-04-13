@@ -1,17 +1,20 @@
 "use client";
 
+import useTheme from "@/hooks/useTheme";
+import { cn } from "@/lib/utils";
 import { Button } from "@/shared/ui/button";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/shared/ui/dropdown-menu";
 import { CircleUserRound, Leaf, ListTodo, LogOut, Menu, Moon, Sun } from "lucide-react";
 import Link from "next/link";
 
 export default function Header() {
-  // TODO: 로그인 여부에 따른 메뉴 아이콘 처리
+  const { isDark, toggleHandler } = useTheme();
 
   return (
-    <header className="fixed top-0 z-10 h-14 w-full bg-white/60 shadow-xs backdrop-blur-xl">
+    <header className="fixed top-0 z-10 h-14 w-full shadow-xs backdrop-blur-2xl">
       <div className="flex h-full items-center justify-between px-4">
         {/* 좌측 메뉴 */}
+        {/* TODO: 로그인 여부에 따른 메뉴 아이콘 처리 */}
         <div className="flex w-1/3">
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
@@ -51,11 +54,12 @@ export default function Header() {
         </div>
 
         {/* 우측 short cut */}
-        {/* TODO: 테마 기능 구현 */}
         <div className="flex w-1/3 justify-end">
-          <Button variant="ghost">
-            <Sun className="h-[1.2rem] w-[1.2rem] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" />
-            <Moon className="absolute h-[1.2rem] w-[1.2rem] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />
+          <Button onClick={toggleHandler} variant="ghost">
+            <Sun className={cn("transition-all", isDark && "scale-100 rotate-0", !isDark && "scale-0 rotate-90")} />
+            <Moon
+              className={cn("absolute transition-all", !isDark && "scale-100 rotate-0", isDark && "scale-0 -rotate-90")}
+            />
           </Button>
         </div>
       </div>
