@@ -1,7 +1,7 @@
 import GoogleLogo from "@/components/icon/GoogleLogo";
 import KakaoLogo from "@/components/icon/KakaoLogo";
 import NaverLogo from "@/components/icon/NaverLogo";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/shared/ui/button";
 
 export default function LoginForm() {
   return (
