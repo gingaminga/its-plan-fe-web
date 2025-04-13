@@ -1,0 +1,43 @@
+.btn-kakao {
+  background-color: #fee500;
+  border-color: #fee500;
+  color: #000000;
+  text-transform: none;
+}
+
+.btn-kakao:hover {
+  background-color: #cbb700;
+  border-color: #cbb700;
+  color: #000000;
+  text-transform: none;
+}
+
+.btn-naver {
+  background-color: #03c75a;
+  border-color: #03c75a;
+  color: #ffffff;
+  text-transform: none;
+}
+
+.btn-naver:hover {
+  background-color: #029f48;
+  border-color: #029f48;
+  color: #ffffff;
+  text-transform: none;
+}
+
+.btn-google {
+  background-color: #ffffff;
+  border-color: #dee2e6;
+  box-shadow: 0 0 5px rgb(0, 0, 0, 30%);
+  color: #000000;
+  text-transform: none;
+}
+
+.btn-google:hover {
+  background-color: #d0d0d0;
+  border-color: #d0d0d0;
+  box-shadow: 0 0 5px rgb(0, 0, 0, 30%);
+  color: #000000;
+  text-transform: none;
+}

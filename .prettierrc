@@ -1,5 +1,7 @@
 {
   "plugins": ["prettier-plugin-tailwindcss"],
+  "tailwindFunctions": ["clsx", "cva"],
+  "tailwindStylesheet": "./assets/styles/globals.css",
 
   "printWidth": 120,
   "trailingComma": "all"
