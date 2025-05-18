@@ -1,0 +1,18 @@
+name: Auto PR Review
+
+on:
+  pull_request:
+
+jobs:
+  codeball_job:
+    runs-on: ubuntu-latest
+    name: Codeball
+    steps:
+      - name: Codeball
+        uses: sturdy-dev/codeball-action@v2
+        with:
+          approvePullRequests: "true" # 안전한 PR이면 승인
+          labelPullRequestsWhenApproved: "true" # 승인 시 레이블 추가
+          labelPullRequestsWhenReviewNeeded: "false" # 리뷰 필요 시 레이블 추가
+          failJobsWhenReviewNeeded: "false" # 리뷰 필요 시 워크플로우 실패
+          codeSuggestionsFromComments: "true" # 코드 추천
