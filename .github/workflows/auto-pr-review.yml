@@ -1,0 +1,21 @@
+name: Auto PR Review
+
+on:
+  pull_request:
+
+jobs:
+  auto-pr-review:
+    runs-on: ubuntu-latest
+    steps:
+      - name: /describe와 /review 추가하기
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.ITS_PLAN_GITHUB_TOKEN }}
+          script: |
+            const comment = `/describe\n/review`;
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.payload.pull_request.number,
+              body: comment
+            });
