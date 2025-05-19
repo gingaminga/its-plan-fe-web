@@ -12,7 +12,7 @@ jobs:
         with:
           github-token: ${{ secrets.ITS_PLAN_GITHUB_TOKEN }}
           script: |
-            const comment = `/describe\n/review`;
+            const comment = `/describe --config.response_language="ko-KR"\n/review --config.response_language="ko-KR"\n/improve --config.response_language="ko-KR"`;
             await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
