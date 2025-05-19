@@ -12,7 +12,7 @@ jobs:
         with:
           github-token: ${{ secrets.ITS_PLAN_GITHUB_TOKEN }}
           script: |
-            const comment = `/describe\n/review\n/label`;
+            const comment = `/describe\n/review`;
             await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
