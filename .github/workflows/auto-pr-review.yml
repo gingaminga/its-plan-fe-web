@@ -7,12 +7,12 @@ jobs:
   auto-pr-review:
     runs-on: ubuntu-latest
     steps:
-      - name: /describe 명령어
+      - name: PR 설명 작성
         uses: actions/github-script@v7
         with:
           github-token: ${{ secrets.ITS_PLAN_GITHUB_TOKEN }}
           script: |
-            const comment = `/describe`;
+            const comment = `/describe --config.response_language="ko-KR"`;
             await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
@@ -20,12 +20,12 @@ jobs:
               body: comment
             });
 
-      - name: /review 명령어
+      - name: 리뷰하기
         uses: actions/github-script@v7
         with:
           github-token: ${{ secrets.ITS_PLAN_GITHUB_TOKEN }}
           script: |
-            const comment = `/review`;
+            const comment = `/review --config.response_language="ko-KR"`;
             await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
@@ -33,12 +33,12 @@ jobs:
               body: comment
             });
 
-      - name: /improve 명령어
+      - name: 개선점 찾기
         uses: actions/github-script@v7
         with:
           github-token: ${{ secrets.ITS_PLAN_GITHUB_TOKEN }}
           script: |
-            const comment = `/improve`;
+            const comment = `/improve --config.response_language="ko-KR"`;
             await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
