@@ -33,7 +33,7 @@ jobs:
       - name: 지라 이슈 제목 가져오기
         if: env.issue_key != ''
         run: |
-          jira_response=$(curl -s -u "${{ secrets.JIRA_EMAIL }}:${{ secrets.JIRA_API_TOKEN }}" \
+          jira_response=$(curl -s -u "${{ secrets.JIRA_EMAIL }}:${{ secrets.JIRA_TOKEN }}" \
             -H "Accept: application/json" \
             "https://gingaminga.atlassian.net/rest/api/3/issue/${{ env.issue_key }}")
           title=$(echo "$jira_response" | jq -r '.fields.summary')
