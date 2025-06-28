@@ -25,7 +25,7 @@ case "$type" in
   fix) emoji="🐛";;
   refactor) emoji="🔨";;
   test) emoji="🧪";;
-  design) emoji="🎨";;
+  design) emoji="💄";;
   style) emoji="🎨";;
   lint) emoji="🚨";;
   ci/cd) emoji="👷";;
