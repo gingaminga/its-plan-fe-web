@@ -23,6 +23,7 @@ const eslintConfig = [
     ...perfectionist.configs["recommended-alphabetical"],
     rules: {
       ...perfectionist.configs["recommended-alphabetical"].rules,
+      "perfectionist/sort-imports": ["error", { newlinesBetween: "never" }],
     },
   },
 ];
