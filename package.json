@@ -8,10 +8,13 @@
     "start": "next start",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
+    "format": "prettier --write .",
     "prepare": "husky"
   },
   "dependencies": {
+    "eslint-config-prettier": "^10.1.5",
     "next": "15.3.4",
+    "prettier": "^3.6.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },

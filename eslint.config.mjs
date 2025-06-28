@@ -26,6 +26,7 @@ const eslintConfig = [
       "perfectionist/sort-imports": ["error", { newlinesBetween: "never" }],
     },
   },
+  ...compat.extends("prettier"),
 ];
 
 export default eslintConfig;
