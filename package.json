@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "lint:fix": "next lint --fix",
     "prepare": "husky"
   },
   "dependencies": {
@@ -22,6 +23,8 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.3.4",
+    "eslint-plugin-perfectionist": "^4.15.0",
+    "eslint-plugin-unicorn": "^59.0.1",
     "husky": "^9.1.7",
     "tailwindcss": "^4",
     "typescript": "^5"
