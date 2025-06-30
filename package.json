@@ -13,8 +13,8 @@
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx}": [
-      "npm run lint",
-      "npm run format"
+      "node_modules/.bin/eslint --fix",
+      "node_modules/.bin/prettier --write"
     ]
   },
   "dependencies": {
