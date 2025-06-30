@@ -17,6 +17,7 @@ const eslintConfig = [
     ...unicorn.configs.recommended,
     rules: {
       ...unicorn.configs.recommended.rules,
+      "unicorn/prevent-abbreviations": ["off"],
     },
   },
   {
